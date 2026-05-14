@@ -11,7 +11,6 @@ function updateCountdown() {
 
     status.textContent =
         `${days}d ${hours}h ${minutes}m ${seconds}s Left To Limit Global Warming To 1.5C`;
-    status.style.color = 'darkred';
 }
 
 updateCountdown();

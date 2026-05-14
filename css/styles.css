@@ -1,5 +1,5 @@
 :root {
-    --mainGreen: rgb(64, 160, 43);
+    --mainGreen: rgb(32, 80, 22);
     --mainText: rgb(76, 79, 105);
     --secondaryText: rgb(220, 224, 232);
     --mainBackGround: rgb(239, 241, 245);
@@ -78,6 +78,7 @@ h3{
 
 footer {
     padding: 15px;
+    color: var(--secondaryText);
 }
 
 a{
