@@ -4,7 +4,6 @@ const status = document.getElementById('statusCountdown');
 function updateCountdown() {
     const today = new Date();
     const timeLeft = timeLimit - today;
-
     const seconds = Math.floor(timeLeft / 1000) % 60;
     const minutes = Math.floor(timeLeft / (1000 * 60)) % 60;
     const hours = Math.floor(timeLeft / (1000 * 60 * 60)) % 24;

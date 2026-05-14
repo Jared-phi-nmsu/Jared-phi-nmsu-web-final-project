@@ -8,20 +8,20 @@ function timeToMinutes(timeStr) {
 
 function checkStatus() {
 
-  const currentTime = new Date();
-  const currentMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
-  const openMinutes = timeToMinutes(openTime);
-  const closeMinutes = timeToMinutes(closeTime);
-  
-  const status = document.getElementById("status");
+    const currentTime = new Date();
+    const currentMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
+    const openMinutes = timeToMinutes(openTime);
+    const closeMinutes = timeToMinutes(closeTime);
+    
+    const status = document.getElementById("status");
 
-  if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
-      status.textContent = "We are OPEN";
-      status.style.color = "green";
-  } else {
-      status.textContent = "We are CLOSED";
-      status.style.color = "red";
-  }
+    if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
+        status.textContent = "We are OPEN";
+        status.style.color = "green";
+    } else {
+        status.textContent = "We are CLOSED";
+        status.style.color = "red";
+    }
 }
 
 checkStatus();

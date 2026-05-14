@@ -1,10 +1,14 @@
-let carbonCount = 0;
+let carbonCount = Number(sessionStorage.getItem("carbonCount")) || 0;
 
 function updateTracker() {
     carbonCount += 290000;
 
+    sessionStorage.setItem("carbonCount", carbonCount);
+
     const element = document.getElementById("carbonTracker");
-    const displayValue = `Since you joined, hummanity has exhausted ${carbonCount} Lbs of CO2 `;
+
+    const displayValue =
+        `Since you joined, humanity has exhausted ${carbonCount.toLocaleString()} Lbs of CO2`;
 
     if (element) {
         element.textContent = displayValue;
@@ -14,7 +18,7 @@ function updateTracker() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById("carbonTracker");
     updateTracker();
+
     setInterval(updateTracker, 100);
 });
