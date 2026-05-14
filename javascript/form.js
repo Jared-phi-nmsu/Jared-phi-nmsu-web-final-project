@@ -1,16 +1,18 @@
 const form = document.getElementById("contactForm");
-const name = document.getElementById("name").value.trim();
-const email = document.getElementById("email").value.trim();
-const phone = document.getElementById("phone").value.trim();
-const message = document.getElementById("message").value.trim();
-const emailPattern = /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+\-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i; // https://colinhacks.com/essays/reasonable-email-regex
+
+const emailPattern = /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+\-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i;
 const phonePattern = /^\d{10}$/;
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    document.querySelectorAll(".error").forEach((e) => {
-        e.textContent = "";
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    document.querySelectorAll(".error").forEach((el) => {
+        el.textContent = "";
     });
 
     let isValid = true;
@@ -36,13 +38,9 @@ form.addEventListener("submit", function (e) {
     }
 
     if (isValid) {
-        const formData = {name, email, phone, message};
-
-        console.log("Contact Form Submitted:");
-        console.log(formData);
+        console.log("Contact Form Submitted:", { name, email, phone, message });
 
         alert("Form submitted successfully!");
-
         form.reset();
     }
 });
