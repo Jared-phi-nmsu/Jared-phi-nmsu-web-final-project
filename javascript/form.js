@@ -3,7 +3,7 @@ const name = document.getElementById("name").value.trim();
 const email = document.getElementById("email").value.trim();
 const phone = document.getElementById("phone").value.trim();
 const message = document.getElementById("message").value.trim();
-const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/; // https://regexr.com/3e48o
+const emailPattern = /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+\-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i; // https://colinhacks.com/essays/reasonable-email-regex
 const phonePattern = /^\d{10}$/;
 
 form.addEventListener("submit", function (e) {
