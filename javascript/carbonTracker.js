@@ -1,7 +1,7 @@
 let carbonCount = Number(sessionStorage.getItem("carbonCount")) || 0;
 
 function updateTracker() {
-    carbonCount += 290000;
+    carbonCount += 2947580; // https://www.pik-potsdam.de/en/institute/departments/climate-economics-and-policy/carbon-clock/remaining-carbon-budget
 
     sessionStorage.setItem("carbonCount", carbonCount);
 
