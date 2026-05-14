@@ -20,7 +20,7 @@ function checkStatus() {
         status.style.color = "green";
     } else {
         status.textContent = "We are CLOSED";
-        status.style.color = "red";
+        status.style.color = "darkred";
     }
 }
 
