@@ -42,8 +42,8 @@ return `
         <div class="productInfo">
             <h3>${product.title}</h3>
             <p>${product.description}</p>
-            <img src="${product.image}">
         </div>
+        <img src="${product.image}">
         <span class="productCategory">${product.category}</span>
     </article>
 `;

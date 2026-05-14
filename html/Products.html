@@ -18,7 +18,7 @@
 
   <div class="header">
     <h1>GreenTech Solutions</h1>
-    <p>Helping businesses reduce their carbon footprint since 2026</p>
+    <p>Helping businesses reduce their carbon footprint since 2019</p>
   </div>
 
   <div class="containerMain">
@@ -37,7 +37,7 @@
         Include a filter or search feature for easy navigation.
       </p>
       <input type="text" id="searchInput" placeholder="Search products..."/>
-      <div id="productList"></div>
+      <div class="productList" id="productList"></div>
 
       <script src="../javascript/products.js">  </script>
     </article>
@@ -45,7 +45,11 @@
   </div>
 
   <footer>
+    <div class="carbonTracker" id="carbonTracker"></div>
+    <script src="../javascript/carbonTracker.js"></script>
     © 2026 GreenTech
+    <div class="statusCountdown" id="statusCountdown">test</div>
+    <script src="../javascript/countdown.js"></script>
   </footer>
 
 </body>
