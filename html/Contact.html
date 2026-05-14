@@ -1,0 +1,104 @@
+<!-- Contact Page:
+
+    Include a contact form, company email, phone number, and physical address.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">  
+    <meta name="Author" content="Jared Phillips">
+    <meta name="Date" content="05-13-2026">
+    <meta name="Description" content="This is my final project contacts page made with HTML, CSS and javascript for the GreenTech Solutions client.">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Final</title>
+</head>
+<body>
+
+  <div class="header">
+    <h1>GreenTech Solutions</h1>
+    <p>Helping businesses reduce their carbon footprint since 2026</p>
+  </div>
+
+  <div class="containerMain">
+
+    <div class="sidebarMain">
+      <h3>Menu</h3>
+
+      <a href="Home.html">Back</a>
+    </div>
+
+    <article class="articleMain">
+      
+    <section class="contactSection">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          Have questions or need assistance?
+        </p>
+
+        <div class="contactWrapper">
+        <form class="contactForm" id="contactForm">
+          
+          <div class="formGroup">
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            <span class="error" id="nameError"></span><br/>
+
+            <label for="email">Email Address: </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            <span class="error" id="emailError"></span><br/>
+
+            <label for="phone">Phone Number: </label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+            <span class="error" id="phoneError"></span><br/>
+
+            <textarea id="message" name="message" rows="5" cols="50" placeholder="Write your message here..." required
+            ></textarea>
+            <span class="error" id="messageError"></span><br/>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+          <div class="contactInfo">
+            <h3>Get in Touch</h3>
+
+            <p>
+              <strong>Email:</strong><br/>
+              <a href="mailto:contactEmail@GreenTechSolutions.com">contactEmail@GreenTechSolutions.com</a>
+            </p>
+
+            <p>
+              <strong>Phone:</strong><br/>
+              +1 (800) 867-5309
+            </p>
+
+            <p>
+              <strong>Address:</strong><br/>
+              308 Negra Arroyo Lane<br/> 
+              Albuquerque, New Mexico 87104<br/>
+              United States
+            </p>
+
+            <p><strong>Business Hours:</strong><br/>
+              9am - 5:30pm</p>
+            <div id="status">Checking...</div>
+            <script src="../javascript/openStatus.js"></script>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../javascript/form.js"></script>
+
+    </article>
+
+  </div>
+
+  <footer>
+    © 2026 GreenTech
+  </footer>
+
+</body>
+</html>

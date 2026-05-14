@@ -1,0 +1,208 @@
+:root {
+    --mainGreen: rgb(64, 160, 43);
+    --mainText: rgb(76, 79, 105);
+    --secondaryText: rgb(220, 224, 232);
+
+    --mainBackGround: rgb(239, 241, 245);
+    --secondaryBackGround: rgb(239, 230, 245);
+    --menuHover: rgb(230, 206, 246);
+
+    --mainWhite: rgb(255, 250, 255);
+
+    --mainBorder: #ccc;
+
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    --radiusBig: 14px;
+    --radiusSmall: 10px;
+
+    --transition: 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mainBackGround);
+    color: var(--mainText);
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: 1rem;
+    border-radius: var(--radiusSmall);
+}
+
+.header,
+footer {
+    background-color: var(--mainGreen);
+    color: var(--secondaryText);
+    text-align: center;
+}
+
+.header {
+    font-weight: bold;
+    box-shadow: var(--shadow);
+}
+
+footer {
+    padding: 15px;
+}
+
+.containerMain {
+    display: flex;
+    min-height: calc(100vh - 140px);
+}
+
+.articleMain {
+    flex: 1;
+    padding: 30px;
+}
+
+.sidebarMain {
+    background-color: var(--secondaryBackGround);
+    width: 250px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebarMain a {
+    background-color: var(--mainWhite);
+    color: var(--mainText);
+
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: var(--radiusBig);
+    box-shadow: var(--shadow);
+
+    transition: transform var(--transition), background-color var(--transition);
+}
+
+.sidebarMain a:hover {
+    background-color: var(--menuHover);
+    transform: translateY(-2px);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid var(--mainBorder);
+}
+
+.keyTips,
+.valueTips {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyTips {
+    font-weight: bold;
+}
+
+.productCard {
+    background-color: var(--mainWhite);
+
+    display: inline-flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 320px;
+    min-height: 220px;
+
+    margin: 12px;
+    padding: 16px;
+
+    border-radius: var(--radiusBig);
+    box-shadow: var(--shadow);
+
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+    max-width: 620px;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.productCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radiusSmall);
+}
+
+.productCategory {
+    font-style: italic;
+}
+
+
+button {
+    background-color: var(--mainGreen);
+    color: var(--mainWhite);
+
+    padding: 12px 18px;
+
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--mainGreen);
+}
+
+
+@media (max-width: 768px) {
+
+    .containerMain {
+        flex-direction: column;
+    }
+
+    .sidebarMain {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebarMain a {
+        flex: 1 1 100px;
+    }
+
+    .articleMain {
+        padding: 20px;
+    }
+
+    .productCard {
+        max-width: 100%;
+    }
+
+    .header {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+}
