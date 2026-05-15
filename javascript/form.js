@@ -1,6 +1,6 @@
 const form = document.getElementById("contactForm");
 
-const emailPattern = /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+\-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i;
+const emailPattern = /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+\-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i; // https://colinhacks.com/essays/reasonable-email-regex
 const phonePattern = /^\d{10}$/;
 
 form.addEventListener("submit", function (e) {
